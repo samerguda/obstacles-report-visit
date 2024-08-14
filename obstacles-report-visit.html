@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معوقات تقرير زيارة خط مجاردة </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>معوقات تقرير زيارة خط مجاردة    </h1>
+            <p id="datetime"></p>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>رقم</th>
+                        <th>الملاحظة</th>
+                        <th>الموقع</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>تغيرات امنية عالية الخطورة بجميع خزانات ومحطات ضخ خط نقل مياه محايل عسير المجاردة لا يوجد بها بوابات وتجهيزات أمينه ،ولم يتم اكمال تركيب السياجات الأمنية بالإضافة إلى عدم وجود رجال أمن لحماية  المواقع المكشوفة.</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>الحراسة الأمنية عمالة اجنبية</td>
+                        <td>محطة ضخ قنا</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>مخاطر وضع خزان الدين بدون حوض احتواء</td>
+                        <td>محطة ضخ قنا</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>مخاطر ادخال نظم نقل المياه بالخدمة ولا يتم تامين أنظمة الحماية الامنية و الحماية من الحريق</td>
+                        <td>محطة ضخ قنا</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>مخاطر عالية لعدم اكتمال تركيب  أنظمة الإنذار في جميع المواقع</td>
+                        <td>محطة ضخ قنا</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>نظام الإطفاء خارج الخدمة</td>
+                        <td>محطة ضخ قنا</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>البوابة الأمنية غير جاهزة</td>
+                        <td>محطة ضخ قنا</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>مخاطر تأخير تجهيز مضخات مياه الحريق والأنظمة في وضعية التشغيل</td>
+                        <td>محطة ضخ قنا</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>"تغيرات امنية عالية الخطورة بجميع خزانات ومحطات ضخ خط نقل مياه محايل عسير المجاردة لا يوجد بها بوابات وتجهيزات أمينه ،ولم يتم اكمال تركيب السياجات الأمنية بالإضافة إلى عدم وجود رجال أمن لحماية  المواقع المكشوفة."</td>
+                        <td>زيارة صمامات محطة ضخ وخزان محايل</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="buttons">
+            <button onclick="copyTable()">نسخ المحتوى</button>
+            <button onclick="window.print()">طباعة</button>
+        </div>
+    </div>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric', 
+                hour: '2-digit', 
+                minute: '2-digit' 
+            };
+            document.getElementById('datetime').textContent = now.toLocaleDateString('ar-SA', options);
+        }
+
+        function copyTable() {
+            const range = document.createRange();
+            range.selectNode(document.querySelector('table'));
+            window.getSelection().removeAllRanges(); // clear current selection
+            window.getSelection().addRange(range); // to select text
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();// to deselect
+            alert('تم نسخ المحتوى إلى الحافظة');
+        }
+
+        // Update the date and time on page load
+        updateDateTime();
+        setInterval(updateDateTime, 60000); // Update the date and time every minute
+    </script>
+</body>
+</html>
