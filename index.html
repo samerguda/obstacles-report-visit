@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معلومات إثبات العضوية</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .text-info {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background-color: #fafafa;
+            direction: ltr; /* لجعل النص باللغة الأصلية (الهولندية) من اليسار لليمين */
+            text-align: left;
+        }
+        .text-info h2 {
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .text-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .text-info ul li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .label {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .image-container {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .arabic-title {
+            text-align: center;
+            color: #333;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="arabic-title">عرض بيانات الوثيقة والصورة</h1>
+        
+        <!-- قسم عرض الصورة -->
+        <div class="image-container">
+            <!-- تم استخدام اسم الملف كما طلبته -->
+            <img src="image.png" alt="صورة وثيقة VERKLARING LIDMAATSCHAP">
+        </div>
+
+        <!-- قسم عرض النص المستخرج من الصورة -->
+        <div class="text-info">
+            <h2>VERKLARING LIDMAATSCHAP</h2>
+            <p>Sandra Muylle, bediende van Solidaris West-Vlaanderen, verklaart dat</p>
+            <ul>
+                <li><span class="label">Naam:</span> ALSAADNI</li>
+                <li><span class="label">Voornaam:</span> SAMER GUDA NASR</li>
+                <li><span class="label">INSZ:</span> 810707 723 41</li>
+                <li><span class="label">Geboortedatum:</span> 07/07/1981</li>
+                <li><span class="label">Adres:</span> MARKTSTRAAT 43, 8530 HARELBEKE</li>
+            </ul>
+            <p>ingeschreven is bij ons ziekenfonds vanaf 19/12/2025 als persoon ten laste met de code gerechtigde 111/111 en in regel is tot en met 31/12/2026.</p>
+            <br>
+            <p>Gedaan op 3 maart 2026</p>
+            <p>Met vriendelijke groeten,<br><br>Lieven Meert<br>Provinciaal secretaris</p>
+        </div>
+    </div>
+
+</body>
+</html>
